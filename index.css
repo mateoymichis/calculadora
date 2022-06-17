@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    background-color: #10287D;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculadora {
+    display: grid;
+    /* 4 columnas de 75 px*/
+    grid-template-columns: repeat(4, 75px);
+    /* Primera fila de 160px y el resto de 75px*/
+    grid-template-rows: 160px repeat(5, 75px);
+    background-color: #148F77;
+    padding: 15px;
+    border-radius: 15px;
+    /* primer valor eje x, segundo valor eje y, tercero difuminación y cuarto tamaño*/
+    box-shadow: 15px 10px 0px 5px #00000033;
+}
+
+button {
+    /*Hace aparecer mano en puntero*/
+    cursor: pointer;
+    margin: 5px;
+    padding: 0px;
+    border-radius: 15px;
+    font-family: 'Karla', sans-serif;
+    font-size: 1.7em;
+    border: none;
+    background-color: #7DCEA0;
+    box-shadow: 5px 5px 10px -3px #00000040, -5px -5px 15px 3px #00FFC11f;
+}
+
+/*cuando el botón se pulsa*/
+button:active {
+    background-color: #006f54;
+}
+/*cuando el botón está en focus*/
+button:focus {
+    outline: none;
+}
+
+.col-2 {
+    grid-column: span 2;
+}
+.display {
+    /*abarca todo el ancho*/
+    grid-column: 1 / -1;
+    padding: 16px;
+    background-color: #17202A;
+    display: flex;
+    margin: 10px 10px 20px;
+    /*un valor arriba del otro*/
+    flex-direction: column;
+    /*alineacion derecha*/
+    align-items: flex-end;
+    color: aliceblue;
+    font-family: 'Red Hat Mono', monospace;
+    border-radius: 15px;
+    text-align: right;
+    justify-content: space-between;
+    /*por si se hacen do lineas*/
+    word-break: break-all;
+    box-shadow: 0px 0px 0px 10px #00000033;
+}
+
+#valor-actual {
+    font-size: 1.5em;
+}
+
+#valor-anterior {
+    font-size: 2em;
+}
